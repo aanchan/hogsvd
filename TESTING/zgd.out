@@ -1,0 +1,243 @@
+
+ Tests of the Generalized Nonsymmetric Eigenvalue Problem Driver ZGGEV
+
+ LAPACK VERSION 3.5.0
+
+ The following parameter values will be used:
+    M:         2     6     8    10    12    20
+    N:         2     6     8    10    12    20
+    NB:        1
+    NBMIN:     1
+    NX:        1
+    NS:        2
+    MAXB:      1
+
+ Relative machine underflow is taken to be    0.222507-307
+ Relative machine overflow  is taken to be    0.179769+309
+ Relative machine precision is taken to be    0.111022D-15
+
+ Routines pass computational tests if test ratio is less than   10.00
+
+
+ ZGV routines passed the tests of the error exits ( 85 tests done)
+
+ ZGV -- Complex Generalized eigenvalue problem driver
+ Matrix types (see ZDRGEV for details): 
+ Special Matrices:                       (J'=transposed Jordan block)
+   1=(0,0)  2=(I,0)  3=(0,I)  4=(I,I)  5=(J',J')  6=(diag(J',I), diag(I,J'))
+ Diagonal Matrices:  ( D=diag(0,1,2,...) )
+   7=(D,I)   9=(large*D, small*I)  11=(large*I, small*D)  13=(large*D, large*I)
+   8=(I,D)  10=(small*D, large*I)  12=(small*I, large*D)  14=(small*D, small*I)
+  15=(D, reversed D)
+ Matrices Rotated by Random Orthogonal Matrices U, V:
+  16=Transposed Jordan Blocks             19=geometric alpha, beta=0,1
+  17=arithm. alpha&beta                   20=arithmetic alpha, beta=0,1
+  18=clustered alpha, beta=0,1            21=random alpha, beta=0,1
+ Large & Small Matrices:
+  22=(large, small)   23=(small,large)    24=(small,small)    25=(large,large)
+  26=random O(1) matrices.
+
+ Tests performed:    
+ 1 = max | ( b A - a B )'*l | / const.,
+ 2 = | |VR(i)| - 1 | / ulp,
+ 3 = max | ( b A - a B )*r | / const.
+ 4 = | |VL(i)| - 1 | / ulp,
+ 5 = 0 if W same no matter if r or l computed,
+ 6 = 0 if l same no matter if l computed,
+ 7 = 0 if r same no matter if r computed,
+
+ Matrix order=    2, type=24, seed=3140, 353,1345, 653, result  5 is 4.504D+15
+ Matrix order=    6, type=15, seed= 326, 246,3003, 141, result  5 is 4.504D+15
+ Matrix order=    6, type=16, seed=2561,2092,2253,1501, result  5 is 4.504D+15
+ Matrix order=    6, type=17, seed= 928, 524,1960,1805, result  5 is 4.504D+15
+ Matrix order=    6, type=18, seed= 207,4051,1322,2589, result  5 is 4.504D+15
+ Matrix order=    6, type=19, seed=1568,1054,3108,4061, result  5 is 4.504D+15
+ Matrix order=    6, type=20, seed=2816,2374,4004,1437, result  5 is 4.504D+15
+ Matrix order=    6, type=21, seed=2562, 875, 872,2909, result  5 is 4.504D+15
+ Matrix order=    6, type=22, seed=3319,2898,2323, 421, result  5 is 4.504D+15
+ Matrix order=    6, type=23, seed=3531, 634, 897,2349, result  5 is 4.504D+15
+ Matrix order=    6, type=24, seed=3589,1622,1806,1013, result  5 is 4.504D+15
+ Matrix order=    6, type=25, seed=2783,2334, 512,1021, result  5 is 4.504D+15
+ Matrix order=    6, type=26, seed=3137, 994,1363,2885, result  5 is 4.504D+15
+ Matrix order=    8, type=15, seed=2866, 214,   1,1861, result  5 is 4.504D+15
+ Matrix order=    8, type=16, seed=2956, 933, 606, 757, result  5 is 4.504D+15
+ Matrix order=    8, type=17, seed=3532,3167,3258,2741, result  5 is 4.504D+15
+ Matrix order=    8, type=18, seed=1945,4022,1865,2917, result  5 is 4.504D+15
+ Matrix order=    8, type=19, seed=  81,3302,2127,1893, result  5 is 4.504D+15
+ Matrix order=    8, type=20, seed= 786,3466,1621, 869, result  5 is 4.504D+15
+ Matrix order=    8, type=21, seed=2270,2402, 346,3941, result  5 is 4.504D+15
+ Matrix order=    8, type=22, seed=1864,1549,2193,2613, result  5 is 4.504D+15
+ Matrix order=    8, type=23, seed=2238,1771, 794,1773, result  5 is 4.504D+15
+ Matrix order=    8, type=24, seed=1060,1095,1526,3813, result  5 is 4.504D+15
+ Matrix order=    8, type=25, seed=3418,3932,2951,  29, result  5 is 4.504D+15
+ Matrix order=    8, type=26, seed=1988,2884,2319,2197, result  5 is 4.504D+15
+ Matrix order=   10, type=15, seed= 362, 860,1065,1109, result  5 is 4.504D+15
+ Matrix order=   10, type=16, seed=3035,2932, 876,2021, result  5 is 4.504D+15
+ Matrix order=   10, type=17, seed=1932,2747,1915,3445, result  5 is 4.504D+15
+ Matrix order=   10, type=18, seed=3976, 520,2977,2757, result  5 is 4.504D+15
+ Matrix order=   10, type=19, seed= 806,4093,1609,2693, result  5 is 4.504D+15
+ Matrix order=   10, type=20, seed=3281,1827, 254,2629, result  5 is 4.504D+15
+ Matrix order=   10, type=21, seed=1238,  15, 384,2565, result  5 is 4.504D+15
+ Matrix order=   10, type=22, seed=3094,3351,2614,2525, result  5 is 4.504D+15
+ Matrix order=   10, type=23, seed=2605, 629,2321,1285, result  5 is 4.504D+15
+ Matrix order=   10, type=24, seed= 929,2687, 964,2925, result  5 is 4.504D+15
+ Matrix order=   10, type=25, seed=1209,2652, 535,1813, result  5 is 4.504D+15
+ Matrix order=   10, type=26, seed= 624,2762,2893, 509, result  5 is 4.504D+15
+ Matrix order=   12, type=15, seed=2619,3620,1934,2301, result  5 is 4.504D+15
+ Matrix order=   12, type=16, seed=3357,4041,1466,3309, result  5 is 4.504D+15
+ Matrix order=   12, type=17, seed=2239,  68,3302,1037, result  5 is 4.504D+15
+ Matrix order=   12, type=18, seed=1615,2331,2107,2557, result  5 is 4.504D+15
+ Matrix order=   12, type=19, seed=1401, 178,4093, 253, result  5 is 4.504D+15
+ Matrix order=   12, type=20, seed= 252,3709, 526,2045, result  5 is 4.504D+15
+ Matrix order=   12, type=21, seed=1352, 392,3695,3837, result  5 is 4.504D+15
+ Matrix order=   12, type=22, seed=1710,1543,1672,2973, result  5 is 4.504D+15
+ Matrix order=   12, type=23, seed=2685, 174, 871,2549, result  5 is 4.504D+15
+ Matrix order=   12, type=24, seed=2693,2404,3046,2957, result  5 is 4.504D+15
+ Matrix order=   12, type=25, seed= 578, 723, 929,1637, result  5 is 4.504D+15
+ Matrix order=   12, type=26, seed=2061,1512,1968, 125, result  5 is 4.504D+15
+ Matrix order=   20, type=15, seed=1185,3266, 461, 701, result  5 is 4.504D+15
+ Matrix order=   20, type=16, seed= 647,2328,1944, 557, result  5 is 4.504D+15
+ Matrix order=   20, type=17, seed=1585,3902,3906,1293, result  5 is 4.504D+15
+ Matrix order=   20, type=18, seed=1063,2113,3640,2685, result  5 is 4.504D+15
+ Matrix order=   20, type=19, seed=2305,3879, 305, 381, result  5 is 4.504D+15
+ Matrix order=   20, type=20, seed= 897,3616, 121,2173, result  5 is 4.504D+15
+ Matrix order=   20, type=21, seed= 676,3851,3089,3965, result  5 is 4.504D+15
+ Matrix order=   20, type=22, seed=1763,2855,1954,1469, result  5 is 4.504D+15
+ Matrix order=   20, type=23, seed=1338,3437,3180,3285, result  5 is 4.504D+15
+ Matrix order=   20, type=24, seed=3522,1685,3785, 813, result  5 is 4.504D+15
+ Matrix order=   20, type=25, seed=2931,3978,3195,3781, result  5 is 4.504D+15
+ Matrix order=   20, type=26, seed= 449,1038,1670,1437, result  5 is 4.504D+15
+ ZGV drivers:     61 out of   1092 tests failed to pass the threshold
+
+ -----------------------------------------------------------------------
+
+ Tests of the Generalized Nonsymmetric Eigenvalue Problem Driver ZGGES
+
+ LAPACK VERSION 3.5.0
+
+ The following parameter values will be used:
+    M:         2     6    10    12    20
+    N:         2     6    10    12    20
+    NB:        1
+    NBMIN:     1
+    NX:        1
+    NS:        2
+    MAXB:      1
+
+ Relative machine underflow is taken to be    0.222507-307
+ Relative machine overflow  is taken to be    0.179769+309
+ Relative machine precision is taken to be    0.111022D-15
+
+ Routines pass computational tests if test ratio is less than   10.00
+
+
+ ZGS routines passed the tests of the error exits ( 85 tests done)
+
+ All tests for ZGS drivers  passed the threshold (   1560 tests run)
+
+ -----------------------------------------------------------------------
+
+ Tests of the Generalized Nonsymmetric Eigenvalue Problem Expert Driver ZGGESX
+
+ LAPACK VERSION 3.5.0
+
+ The following parameter values will be used:
+    N:         2
+    NB:        1
+    NBMIN:     1
+    NX:        1
+    NS:        2
+    MAXB:      1
+
+ Relative machine underflow is taken to be    0.222507-307
+ Relative machine overflow  is taken to be    0.179769+309
+ Relative machine precision is taken to be    0.111022D-15
+
+ Routines pass computational tests if test ratio is less than   10.00
+
+
+ ZGX routines passed the tests of the error exits ( 85 tests done)
+
+ All tests for ZGX drivers  passed the threshold (    150 tests run)
+
+ -----------------------------------------------------------------------
+
+ Tests of the Generalized Nonsymmetric Eigenvalue Problem Expert Driver ZGGEVX
+
+ LAPACK VERSION 3.5.0
+
+ The following parameter values will be used:
+    N:         6
+    NB:        1
+    NBMIN:     1
+    NX:        1
+    NS:        2
+    MAXB:      1
+
+ Relative machine underflow is taken to be    0.222507-307
+ Relative machine overflow  is taken to be    0.179769+309
+ Relative machine precision is taken to be    0.111022D-15
+
+ Routines pass computational tests if test ratio is less than   10.00
+
+
+ ZXV routines passed the tests of the error exits ( 85 tests done)
+
+ All tests for ZXV drivers  passed the threshold (   5000 tests run)
+
+ -----------------------------------------------------------------------
+
+ Tests of the Generalized Nonsymmetric Eigenvalue Problem Expert Driver ZGGESX
+
+ LAPACK VERSION 3.5.0
+
+ The following parameter values will be used:
+    N:         0
+    NB:        1
+    NBMIN:     1
+    NX:        1
+    NS:        2
+    MAXB:      1
+
+ Relative machine underflow is taken to be    0.222507-307
+ Relative machine overflow  is taken to be    0.179769+309
+ Relative machine precision is taken to be    0.111022D-15
+
+ Routines pass computational tests if test ratio is less than   10.00
+
+
+ ZGX routines passed the tests of the error exits ( 85 tests done)
+
+ All tests for ZGX drivers  passed the threshold (     20 tests run)
+
+ -----------------------------------------------------------------------
+
+ Tests of the Generalized Nonsymmetric Eigenvalue Problem Expert Driver ZGGEVX
+
+ LAPACK VERSION 3.5.0
+
+ The following parameter values will be used:
+    N:         0
+    NB:        1
+    NBMIN:     1
+    NX:        1
+    NS:        2
+    MAXB:      1
+
+ Relative machine underflow is taken to be    0.222507-307
+ Relative machine overflow  is taken to be    0.179769+309
+ Relative machine precision is taken to be    0.111022D-15
+
+ Routines pass computational tests if test ratio is less than   10.00
+
+
+ ZXV routines passed the tests of the error exits ( 85 tests done)
+
+ All tests for ZXV drivers  passed the threshold (      8 tests run)
+
+ -----------------------------------------------------------------------
+
+
+ End of tests
+ Total time used =         0.64 seconds
+

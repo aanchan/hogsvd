@@ -1,0 +1,48 @@
+ Real BLAS Test Program Results
+
+
+ Test of subprogram number  1             SDOT 
+                                    ----- PASS -----
+
+ Test of subprogram number  2            SAXPY 
+                                    ----- PASS -----
+
+ Test of subprogram number  3            SROTG 
+                                    ----- PASS -----
+
+ Test of subprogram number  4             SROT 
+                                    ----- PASS -----
+
+ Test of subprogram number  5            SCOPY 
+                                    ----- PASS -----
+
+ Test of subprogram number  6            SSWAP 
+                                    ----- PASS -----
+
+ Test of subprogram number  7            SNRM2 
+                                    ----- PASS -----
+
+ Test of subprogram number  8            SASUM 
+                                    ----- PASS -----
+
+ Test of subprogram number  9            SSCAL 
+                                    ----- PASS -----
+
+ Test of subprogram number 10            ISAMAX
+                                    ----- PASS -----
+
+ Test of subprogram number 11            SROTMG
+                                       FAIL
+
+ CASE  N INCX INCY  I                             COMP(I)                             TRUE(I)  DIFFERENCE     SIZE(I)
+
+   11  5 9999 9999  1                      0.21250648E+13                      0.75497474E-02  0.2125E+13  0.7550E-02
+   11  5 9999 9999  3                      0.19402553E-05                      0.32552082E+02 -0.3255E+02  0.3255E+02
+   11  5 9999 9999  6                      0.14551915E-10                      0.24414062E-03 -0.2441E-03  0.2441E-03
+   11  5 9999 9999  8                      0.48506383E-07                      0.81380206E+00 -0.8138E+00  0.8138E+00
+
+ Test of subprogram number 12            SROTM 
+                                    ----- PASS -----
+
+ Test of subprogram number 13            SDSDOT
+                                    ----- PASS -----
